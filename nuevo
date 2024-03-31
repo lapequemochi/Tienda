@@ -1,1 +1,96 @@
-class nuevo
+class RangoEncuesta:
+    
+    def __init__(self):
+        personasCasadas = 0
+    
+    def agregarRespuestas(self,estadoCivil):
+        if estadoCivil == "casado":
+            self.personasCasadas += 1
+        elif estadoCivil == "soltero":
+            self.personasCasadas += 0
+    
+    def darPersonasCasadas(self):
+        return self.personasCasadas
+    
+    def __init__(self):
+        self.totalOpinionCasados = 0
+        
+    def agregarOpinionCasados(self,opinion):
+        self.totalOpinionCasados += opinion
+        
+    def darTotalOpinionCasados(self):
+        return self.totalOpinionCasados
+    
+    def __init__(self):
+        self.totalOpiniones = 0
+        self.numeroEncuestados = 0
+    
+    def agregarOpinion(self, opinion):
+        self.totalOpiniones += opinion
+        self.numeroEncuestados += 1
+        
+    def darPromedio(self):
+        if self.numeroEncuestados == ():
+            return self.totalOpiniones / self.numeroEncuestados
+        
+    def __init__(self):
+        self.totalOpiniones = 0
+        self.numeroEncuestados = 0
+        self.totalOpinionCasados = 0
+        
+    def agregarOpinion(self, opinion):
+        self.totalOpiniones += opinion
+        self.numeroEncuestados += 1
+        
+    def agregarOpinionCasados(self, opinionEncuestados):
+        self.agregarOpinionCasados += opinionEncuestados
+        if opinionEncuestados: print("Opinion registrada para personas casadas: de acuerdo")
+        else: print("Opinion registrada para personas casadas:en desacuerdo")
+        
+    def __init__(self):
+        self.totalOpinionCasados = 0
+        self.numeroEncuestadosCasados = 0
+        
+    def agregarOpinionCasados(self, opinionEncuestados):
+        self.totalOpinionCasados += opinionEncuestados
+        self.numeroEncuestadosCasados += 1
+        
+    def darPromedioCasados(self):
+        return self.totalOpinionCasados / self.numeroEncuestadosCasados
+    
+    def __init__(self):
+        self.rango1 = RangoEncuesta()
+        
+    def agregarOpinionRango1Casados(self,opinionEncuestado):
+        self.rango1.agregarOpinionCasados(opinionEncuestado)
+        
+    def __init__(self):
+        self.rango2 = RangoEncuesta()
+        
+    def agregarOpinionRango2Soltero(self, estadoCivil, opinion):
+        if estadoCivil == "soltero":
+            self.rango2.agregarOpinion(opinion)
+            
+    def __init__(self):
+        self.totalOpiniones = 0
+        self.totalEncuestados = 0
+    
+    def agregarRango(self,rango):
+        self.totalOpiniones += rango.totalOpiniones
+        self.totalEncuestados += rango.numeroEncuestados
+        
+    def darPromedio(self):
+        if self.totalEncuestados != 0:
+            return self.totalOpiniones / self.totalEncuestados
+        
+    def __init__(self):
+        self.totalOpinionesCasados = 0
+        self.totalEncuestadosCasados = 0
+        
+    def agregarRango(self, rango):
+        self.totalOpinionCasados += rango.totalOpinionesCasados
+        self.totalEncuestadosCasados += rango.numeroCasados
+    
+    def darPromedioCasados(self):
+        if self.totalEncuestadosCasados != 0:
+            return self.totalOpinionCasados / self.totalEncuestadosCasados
